@@ -10,7 +10,9 @@ let isOnlineVar = 0;
 // do this when loadBtn is pressed
 function loadPre(){
     checkdir()
+    if(isDir == 0){dirMake()}
     OnlineCheck()
+    location.replace("loadTextures.html");
 }
 
 //---------------------------------------
@@ -38,7 +40,28 @@ const dir = 'C:/Users/'+userName+'/AppData/LocalLow/Oskar Stalberg/Townscaper/Te
 
 if (fs.existsSync(dir)) {
     console.log('Directory exists!');
+    isDir = 1;
 } else {
     console.log('Directory not found.');
+    isDir = 0
 }
+}
+
+// dirMake
+function dirMake(){
+    var userName = process.env['USERPROFILE'].split(path.sep)[2];
+    console.log(userName);
+
+    const fs = require('fs');
+
+    // directory path
+    const dir = 'C:/Users/'+userName+'/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures';
+
+    // create new directory
+    fs.mkdir(dir, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("Directory is created.");
+    });
 }

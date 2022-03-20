@@ -2,9 +2,9 @@
   "name": "sea-loader",
   "version": "1.0.0",
   "description": "A loader for the game Townscaper.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/half-real-SCRACX/SEA-Loader/issues"
   },
-  "homepage": "https://github.com/half-real-SCRACX/SEA-Loader#readme"
+  "homepage": "https://github.com/half-real-SCRACX/SEA-Loader#readme",
+  "devDependencies": {
+    "electron": "^17.1.2"
+  }
 }

@@ -7,7 +7,8 @@ const createWindow = () => {
     width: 750,
     height: 750,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration:true,
+      contextIsolation: false,
     }
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));

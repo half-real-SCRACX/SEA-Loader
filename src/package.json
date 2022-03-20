@@ -1,0 +1,19 @@
+{
+  "name": "sea-loader",
+  "version": "1.0.0",
+  "description": "A loader for the game Townscaper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/half-real-SCRACX/SEA-Loader.git"
+  },
+  "author": "SCRACX",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/half-real-SCRACX/SEA-Loader/issues"
+  },
+  "homepage": "https://github.com/half-real-SCRACX/SEA-Loader#readme"
+}

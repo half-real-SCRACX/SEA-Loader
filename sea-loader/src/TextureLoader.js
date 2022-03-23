@@ -8,13 +8,13 @@ const { remote } = require('electron');
 function getInfo(){
     var data = [
         {
-            "id":"1",
+            "id":"01",
             "Title":"1",
             "description":"lorem ipsum",
             "URL":"example.com/1"
         },
         {
-            "id":"2",
+            "id":"02",
             "Title":"2",
             "description":"lorem ipsum",
             "URL":"example.com/2"
@@ -26,6 +26,7 @@ function getInfo(){
     element = '<div> Title: ' + item.Title +
         ', id: ' + item.id +
         ', description: '+ item.description+
+        '<button onclick="downloadRequested(' + item.id + ')">' + item.Title + '</>'
         '</div>';
     root.innerHTML += element;
     }

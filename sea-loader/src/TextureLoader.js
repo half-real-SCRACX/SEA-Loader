@@ -22,10 +22,10 @@ function getInfo(){
         ]
     var root = document.getElementById('container');
 
-    for( var key in data ){
-    element = '<div> Title: ' + data[key].Title +
-        ', id: ' + data[key].id +
-        ', description: '+ data[key].description+
+    for( var item of data ){
+    element = '<div> Title: ' + item.Title +
+        ', id: ' + item.id +
+        ', description: '+ item.description+
         '</div>';
     root.innerHTML += element;
     }

@@ -3,7 +3,7 @@ const loadBtn = document.getElementById('loadBtn');
 const { remote } = require('electron');
 
 
-// get available textures from GitHub
+// get available textures from GitHub and list them on screen
 
 function getInfo(){
     var data = [

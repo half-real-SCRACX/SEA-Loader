@@ -12,11 +12,8 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": {
-    "name": "SCRACX",
-    "email": "robertlupas09@gmail.com"
-  },
-  "license": "MIT",
+  "author": "SCRACX <robertlupas09@gmail.com>",
+  "license": "Apache-2.0",
   "config": {
     "forge": {
       "packagerConfig": {},

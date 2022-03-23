@@ -1,10 +1,8 @@
 const loadBtn = document.getElementById('loadBtn');
-
 const { remote } = require('electron');
 
 
 // get available textures from GitHub and list them on screen
-
 function getInfo(){
     var data = [
         {
@@ -26,8 +24,11 @@ function getInfo(){
     element = '<div> Title: ' + item.Title +
         ', id: ' + item.id +
         ', description: '+ item.description+
-        '<button onclick="downloadRequested(' + item.id + ')">' + item.Title + '</>'
+        '<button onclick="downloadRequestedTexture(' + item.id + ')">' + item.Title + '</>'
         '</div>';
     root.innerHTML += element;
     }
 }
+
+// download the texture
+function downloadRequestedTexture(fileToDownload)

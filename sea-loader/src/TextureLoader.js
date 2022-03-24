@@ -37,9 +37,9 @@ const fs = require('fs');
 const textureFolder = 'C:/Users/'+userName+'/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures';
 
 // actually download the file
-var exactURL1 = fileToDownload + '/TownMaterial.png';
-var exactURL2 = fileToDownload + '/TownPalette.png';
-var exactURL3 = fileToDownload + '/TownColor.png';
+var exactURL1 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/' + fileToDownload + '/TownMaterial.png';
+var exactURL2 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/' + fileToDownload + '/TownPalette.png';
+var exactURL3 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/' + fileToDownload + '/TownColor.png';
 const { DownloaderHelper } = require('node-downloader-helper');
 const dl = new DownloaderHelper(exactURL1, __dirname, {
     fileName: (TownMaterial.png, textureFolder)|{name, ext}

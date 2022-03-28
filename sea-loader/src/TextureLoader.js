@@ -1,5 +1,5 @@
 const loadBtn = document.getElementById('loadBtn');
-const { remote } = require('electron');
+const { remote , ipcRenderer } = require('electron');
 
 
 // get available textures from GitHub and list them on screen
@@ -20,7 +20,7 @@ function getInfo(){
         ]
     var root = document.getElementById('container');
     for( var item of data ){
-    element = '<div> Title: ' + item.Title +
+    element = '<div>Title: ' + item.Title +
         ', id: ' + item.id +
         ', description: '+ item.description+
         '<button onclick="downloadRequestedTexture('+ item.URL + ')">' + item.Title + '</>'
@@ -41,3 +41,8 @@ var exactURL1 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for
 var exactURL2 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/' + fileToDownload + '/TownPalette.png';
 var exactURL3 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/' + fileToDownload + '/TownColor.png';
 }
+
+ipcRenderer.send("download", {
+    url: 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/TownColor.png',
+    properties: {directory: 'C:/Users/Robert/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures'}
+});

@@ -9,7 +9,7 @@ function getInfo(){
             "id":"01",
             "Title":"1",
             "description":"lorem ipsum",
-            "URL":"example.com/1"
+            "URL":"https://gitcdn.link/cdn/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/TownColor.png"
         },
         {
             "id":"02",

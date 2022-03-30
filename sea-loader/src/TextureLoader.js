@@ -23,7 +23,7 @@ function getInfo(){
     element = '<div>Title: ' + item.Title +
         ', id: ' + item.id +
         ', description: '+ item.description+
-        '<button onclick="downloadRequestedTexture('+ item.URL + ')">' + item.Title + '</>'
+        '<button onclick="downloadRequestedTexture('+ item.URL + ');">' + item.Title + '</>'
         '</div>';
     root.innerHTML += element;
     }

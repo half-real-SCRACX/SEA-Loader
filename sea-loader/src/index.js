@@ -13,7 +13,7 @@ const createWindow = () => {
     }
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-};
+  };
 
 app.on('ready', createWindow, () => {
     ipcMain.on("download", (event, info) => {

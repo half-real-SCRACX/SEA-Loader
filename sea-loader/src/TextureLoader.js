@@ -4,21 +4,21 @@ const { remote , ipcRenderer } = require('electron');
 
 // get available textures from GitHub and list them on screen
 function getInfo(){
-    var data = [
+    var data = [ // Pull the available textures. Only for testing. In the future, this will be pulled from a GitHub repo.
         {
             "id":"01",
-            "Title":"1",
-            "description":"lorem ipsum",
-            "URL":"https://gitcdn.link/cdn/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/TownColor.png"
+            "Title":"Test texture 1",
+            "description":"Actual texture",
+            "URL":"https://gitcdn.link/cdn/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/"
         },
         {
             "id":"02",
-            "Title":"2",
-            "description":"lorem ipsum",
-            "URL":"example.com/2"
+            "Title":"Test texture 2",
+            "description":"Actual texture. Same as One.",
+            "URL":"https://gitcdn.link/cdn/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/"
         }
         ]
-    var root = document.getElementById('container');
+    var root = document.getElementById('container'); // inject the elements in the container div, with buttons with the current arguments
     for( var item of data ){
     element = '<div>Title: ' + item.Title +
         ', id: ' + item.id +
@@ -43,6 +43,14 @@ var exactURL3 = 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for
 }
 
 ipcRenderer.send("download", {
-    url: 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/TownColor.png',
-    properties: {directory: 'C:/Users/Robert/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures'}
+    url: 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/' + 'TownColor.png',
+    properties: {directory: 'C:/Users/' + userName + '/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures'}
+});
+ipcRenderer.send("download", {
+    url: 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/' + 'TownPalette.png',
+    properties: {directory: 'C:/Users/' + userName + '/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures'}
+});
+ipcRenderer.send("download", {
+    url: 'https://raw.githubusercontent.com/half-real-SCRACX/Textures-for-Townscaper/main/Textures/01/' + 'TownColor.png',
+    properties: {directory: 'C:/Users/' + userName + '/AppData/LocalLow/Oskar Stalberg/Townscaper/Textures'}
 });

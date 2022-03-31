@@ -1,2 +1,3 @@
 # SEA-Loader
-A loader for the game Townscaper. Now it can load only Textures, but in the future I aim to make it load mods too.
+A loader for the game Townscaper. Now it doesn't work, because I'm working on it.
+Feel free to pull request with any changes, bug-fixes etc! This would speed everything up!
